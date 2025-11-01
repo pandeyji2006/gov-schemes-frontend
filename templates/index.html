@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Chatbot</title>
+    <!-- Link to external CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Outer container for page background -->
+    <div class="page-container">
+
+        <!-- Main chat container (centered card) -->
+        <div class="chat-container">
+
+            <!-- Header section -->
+            <div class="chat-header">
+                <h1>Chatbot</h1>
+            </div>
+
+            <!-- Chat messages display area (scrollable) -->
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be dynamically added here by JavaScript -->
+            </div>
+
+            <!-- Input area for typing and sending messages -->
+            <div class="input-area">
+                <input
+                    type="text"
+                    id="message-input"
+                    placeholder="Type your message..."
+                    autocomplete="off"
+                >
+                <button id="send-btn">Send</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Pass session_id from Flask to JavaScript -->
+    <script>
+        const sessionId = "{{ session_id }}";
+    </script>
+
+    <!-- Link to external JavaScript file -->
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>
