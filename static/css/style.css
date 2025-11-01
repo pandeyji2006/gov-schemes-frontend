@@ -1,0 +1,168 @@
+/*
+   Flask Chatbot - Stylesheet
+
+   This file contains all styling for the chat interface.
+   Color scheme:
+   - Page background: #f5f5f5
+   - Container: #ffffff
+   - Header: #e0e0e0
+   - User bubbles: #e0e0e0
+   - Bot bubbles: #f5f5f5
+   - Borders: #999999
+   - Button: #cccccc
+   - Text: #333333
+*/
+
+/* Reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+/* Page container - centers content */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main chat container - centered card */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    background-color: #ffffff;
+    border: 2px solid #999999;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section */
+.chat-header {
+    background-color: #e0e0e0;
+    border-bottom: 2px solid #999999;
+    padding: 15px;
+}
+
+.chat-header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Chat messages area - scrollable */
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    border-bottom: 2px solid #999999;
+}
+
+/* Individual message wrapper */
+.message {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+/* User message alignment */
+.message.user {
+    justify-content: flex-end;
+}
+
+/* Bot message alignment */
+.message.bot {
+    justify-content: flex-start;
+}
+
+/* Message bubble styling */
+.message-bubble {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid #999999;
+    border-radius: 8px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* User message bubble */
+.message.user .message-bubble {
+    background-color: #e0e0e0;
+}
+
+/* Bot message bubble */
+.message.bot .message-bubble {
+    background-color: #f5f5f5;
+}
+
+/* Input area - horizontal layout */
+.input-area {
+    display: flex;
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+/* Input field */
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+#message-input:focus {
+    outline: none;
+    border-color: #666666;
+}
+
+/* Send button */
+#send-btn {
+    background-color: #cccccc;
+    border: 1px solid #999999;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+#send-btn:hover {
+    background-color: #b8b8b8;
+}
+
+#send-btn:active {
+    background-color: #a0a0a0;
+}
+
+/* Scrollbar styling (optional, for webkit browsers) */
+.chat-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: #f5f5f5;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #999999;
+    border-radius: 4px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #666666;
+}
