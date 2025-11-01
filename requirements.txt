@@ -1,0 +1,5 @@
+# Flask web framework
+Flask==3.0.0
+
+# MySQL database connector
+mysql-connector-python==8.2.0
